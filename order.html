@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Quicktakes</title>
+    <script src="https://kit.fontawesome.com/abfd1c10c3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    header{
+      background: url(quicktakes1.jpeg) repeat-x  fixed;
+      text-align: center;
+      color: rgb(233, 10, 58);
+      padding: 6px;
+      border-radius: 100px;
+      width: 100%;
+      margin: 0;
+      font-size: xx-large;
+      font-family: fantasy;
+      text-shadow: 4px;
+      background-position: center;
+      background-color: rgb(231, 234, 236);
+      border: none;
+      animation-name: header;
+      animation-duration: 120s;
+      animation-delay: 5s;
+      animation-iteration-count: infinite;
+      animation: header 120s 5s infinite;
+    }
+    @keyframes header{
+      0%{color: rgba(184, 144, 12, 0.74);background-color: rgb(0, 0, 0);}
+      100%{color: rgb(233, 17, 100);background-color: rgb(255, 255, 255);}
+    }
+</style>
+<body>
+    <header><p><b><i class="fa-solid fa-hotel"></i>Quicktakes</b><sub><q>best dishes</q></sub></p></header>
+    
+    <section class="order-section">
+        <h2>Place Your Order</h2>
+        <form action="/submit-order" method="POST">
+            <label for="item">Select Items:</label>
+            <!-- Enable multiple selection -->
+            <select id="item" name="item[]" multiple required>
+                <option value="coffee-extra-creamy">Coffee - Extra Creamy (150 Ksh)</option>
+                <option value="coffee-white">Coffee - White (150 Ksh)</option>
+                <option value="coffee-black">Coffee - Black (150 Ksh)</option>
+                <option value="coffee-with-cream">Coffee - With Cream (150 Ksh)</option>
+                <option value="tea-black">Tea - Black (50 Ksh)</option>
+                <option value="tea-green">Tea - Green (150 Ksh)</option>
+                <option value="mango-juice">Mango Juice (100 Ksh)</option>
+                <option value="apple-juice">Apple Juice (100 Ksh)</option>
+                <option value="delmonte-pineapple">Delmonte Pineapple (300 Ksh)</option>
+                <option value="soda-coke">Soda - Coke (50 Ksh)</option>
+                <option value="soda-fanta">Soda - Fanta (50 Ksh)</option>
+                <option value="soda-sprite">Soda - Sprite (50 Ksh)</option>
+                <option value="water-bottle">Water Bottle (50 Ksh)</option>
+                <option value="meat-cheese-banger">Meat-Cheese Banger (500 Ksh)</option>
+                <option value="chicken-sandwich">Chicken Sandwich (350 Ksh)</option>
+                <option value="cheese-burger">Cheese Burger (400 Ksh)</option>
+                <option value="fries">Fries (150 Ksh)</option>
+                <option value="pasta">Pasta (200 Ksh)</option>
+                <option value="grilled-chicken">Grilled Chicken (600 Ksh)</option>
+                <option value="vegetarian-pizza">Vegetarian Pizza (450 Ksh)</option>
+            </select>
+            <br>
+
+            <!-- Optionally, allow users to input quantities -->
+            <label for="quantity">Enter Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+            <br>
+
+            <button type="submit">Order Now</button>
+        </form>
+    </section>
+</body>
+</html>
